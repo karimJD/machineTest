@@ -1,0 +1,24 @@
+<div class="container">
+    <input type="text" class="search-bar" placeholder="type your city.." #country [style.left.px]="input_left">
+    <button class="search" (click)="search(country.value)" [style.left.px]="button_left">search </button>
+    <div class="background" [style.left.px]="card_left" >
+        <p class="country">
+           {{ city }}
+        </p>
+        <p class="description">
+            {{ description }}
+        </p>
+        <p class="heat">
+            {{ heat }}°F
+        </p>
+        <p class="wind">
+           Wind : {{ wind }} meters/Second
+        </p>
+        <p class="visibility">
+            Vsibility : {{ visibility }}
+        </p>
+        <p class="humidity">
+            Humidity : {{ humidity }}%
+        </p>
+    </div>
+</div>

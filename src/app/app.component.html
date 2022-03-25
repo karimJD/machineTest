@@ -1,0 +1,25 @@
+<div class="container">
+  <span class="title">MY WEATHER</span>
+  <span class="quote">"Don't forget to put sunscreen!"</span>
+  <div class="cards-grid">
+    <div class="card1">
+      <app-card  
+      [card_left]="card1_left"
+      [button_left]="button1_left"
+      [input_left]="input1_left"
+      ></app-card>
+    </div>
+    <div class="card2">
+      <div *ngIf="isShown; else addCard">
+          <app-card
+          [card_left]="card2_left"
+          [button_left]="button2_left"
+          [input_left]="input2_left">
+        </app-card>
+      </div> 
+      <ng-template #addCard>
+        <button class="btn" (click)="addComponent()"></button>
+      </ng-template> 
+    </div>
+    </div>
+  </div>
